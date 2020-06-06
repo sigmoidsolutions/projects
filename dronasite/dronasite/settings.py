@@ -56,8 +56,6 @@ ROOT_URLCONF = 'dronasite.urls'
 TEMPLATE_DIR = os.path.join(BASE_DIR,"templates")
 
 
-# static Directory
-STATIC_DIR = os.path.join(BASE_DIR,"static")
 
 TEMPLATES = [
     {
@@ -126,3 +124,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# static Directory
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'statics')
+]
+
