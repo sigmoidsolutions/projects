@@ -1,4 +1,5 @@
 from django import forms
 
-class homeForm(forms.Form):
-    post = forms.CharField()
+
+class searchForm(forms.Form):
+    searchkey = forms.CharField(max_length=100)

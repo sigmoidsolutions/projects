@@ -11,14 +11,16 @@
 <body>
     <div class="header">
         <div class="search-bar">
-            <form method="post"></form>
+            <form action="" method="POST"></form>
             {% csrf_token %}
-            {{form}}
-                <input type="text" name="search" placeholder="Enter Your Search" size="45">
-        </div>
-        <div class="login-btn">
+            {{ form.as_p }}
                 <input type="submit" value="Search">
             </form>
+        </div>
+        <div class="login-btn">
+            {% if submitbutton == "Submit" %} 
+            <h1> Your searched for : {{ searchkey }}</h1>
+            {% endif %} 
         </div>
     </div>
 </body>

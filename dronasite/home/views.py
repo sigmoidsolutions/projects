@@ -1,12 +1,19 @@
 from django.shortcuts import render
 from django.http import HttpRequest, HttpResponse
-from home.forms import homeForm
+from .forms import searchForm
 # Create your views here.
 
 
 def home(request):
-    return render(request, "index.html")
+    submitbutton= request.POST.get("submit")
 
-    def get(request):
-        getSearchKey = request.POST["search"]
-        print(getSearchKey)
+    getKey=''
+
+    form= searchForm(request.POST or None)
+    if form.is_valid():
+        getKey= form.cleaned_data.get("searchkey")
+
+
+    context= {'form': form, 'searchkey': getKey,}
+
+    return render(request, "index.html", context)
