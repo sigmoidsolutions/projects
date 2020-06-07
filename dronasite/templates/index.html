@@ -8,17 +8,35 @@
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
     <script type="text/javascript" src="{% static '/js/main.js' %}"></script>
 </head>
+<style>
+
+html{
+    background-image: url("{% static '/assets/8116.jpg' %}");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width : 100%;
+}
+</style>
 <body>
     <div class="header">
-        <div class="search-bar">
-            <form action="" method="POST"></form>
-                <input type="text" name="search">
-                <input type="submit" value="Search" name="searchkey">
+        <div class="search">
+            <form action="" method="POST">
+                <input type="text" placeholder="Enter your Search" name="search">
+                <input type="submit" class="border-grad" name="searchkey">
             </form>
         </div>
-        <div class="social-btns">
-            <p>Hello world</p>
+        <div class="login-area">
+            <div class="login-btn">
+                <button onclick="">
+                    Login
+                </button>
+            </div>
         </div>
+
+
+
     </div>
 </body>
 </html>

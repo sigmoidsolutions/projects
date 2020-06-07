@@ -1,7 +1,75 @@
 :root{
-    --start-grad-end : #f2c64a;
-    --start-grad-main : #ffffff;
+    --main-color :rgb(0, 97, 252);
+    --secondary-color : rgb(255, 60, 119);
+    --search-bg : #84d2f6;
+    --input-text : #ffffff;
+    --search-btn-bg : #ffa3f3;
+    --search-btn-text : #ffffff;
+    --shadow-light : LightGrey;
 }
-p{
-    color: red;
+
+.header{
+    display: flex;
+    flex-direction: row;
+    padding: 5px 0 5px 0;
+}
+.header .search{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    padding: 5px 65px 5px 65px;
+    color: var(--main-color);
+    border-radius: 5px;
+    border: none;
+}
+
+input[type="text"]
+{
+    padding: 5px 25px 5px 25px;
+    border-radius: 5px;
+    background-color: var(--search-bg);
+    color : var(--input-text);
+    transition: padding .5s;
+}
+
+input[type="text"]:hover{
+    box-shadow: 0 0 6px var(--shadow-light);
+    padding: 5px 65px 5px 65px;
+    transition: padding .5s;
+}
+input[type="submit"]{
+    background-color:var(--search-btn-bg);
+    padding: 5px 25px 5px 25px;
+    border-radius: 5px;
+    color : var(--search-btn-text);
+    transition: padding .5s;
+}
+input[type="submit"]:hover{
+    box-shadow: 0 0 6px var(--shadow-light);
+    padding: 5px 50px 5px 50px;
+    transition: padding .5s;
+
+}
+.login-area{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+.login-area .login-btn{
+    text-align: right;
+}
+.login-area .login-btn button{
+    border-radius: 5px;
+    padding: 5px 25px 5px 25px;
+    background-color: var(--search-btn-bg);
+    margin-right: 5vh;
+    border: none;
+    color: var(--search-btn-text);
+    transition: padding .5s;
+}
+.login-area .login-btn button:hover{
+    box-shadow: 0 0 6px var(--shadow-light);
+    padding: 5px 50px 5px 50px;
+    transition: padding .5s;
 }
