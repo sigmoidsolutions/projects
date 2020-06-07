@@ -1,5 +1,7 @@
 :root{
     --start-grad-end : #f2c64a;
     --start-grad-main : #ffffff;
-
+}
+p{
+    color: red;
 }
