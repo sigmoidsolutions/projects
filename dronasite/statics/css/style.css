@@ -1,11 +1,12 @@
 :root{
     --main-color :rgb(0, 97, 252);
     --secondary-color : rgb(255, 60, 119);
-    --search-bg : #84d2f6;
+    --search-bg : #1d1d1d96;
     --input-text : #ffffff;
-    --search-btn-bg : #ffa3f3;
+    --search-btn-bg : #ece4e3bb;
     --search-btn-text : #ffffff;
-    --shadow-light : LightGrey;
+    --shadow-light : rgba(0, 0, 0, 0.747);
+    --lignt-card : #ffffff;
 }
 
 .header{
@@ -26,7 +27,8 @@ input{
 
 input[type="text"]
 {
-    padding: 5px 25px 5px 25px;
+    padding: 10px 35px 10px 35px;
+    backdrop-filter: blur(5px);
     border-radius: 5px;
     background-color: var(--search-bg);
     color : var(--input-text);
@@ -34,20 +36,20 @@ input[type="text"]
 }
 
 input[type="text"]:hover{
-    box-shadow: 0 0 6px var(--shadow-light);
-    padding: 5px 65px 5px 65px;
+    box-shadow: 0 2px 6px var(--shadow-light);
+    padding: 10px 65px 10px 65px;
     transition: padding .5s;
 }
 input[type="submit"]{
     background-color:var(--search-btn-bg);
-    padding: 5px 25px 5px 25px;
+    padding: 10px 35px 10px 35px;
     border-radius: 5px;
     color : var(--search-btn-text);
     transition: padding .5s;
 }
 input[type="submit"]:hover{
-    box-shadow: 0 0 6px var(--shadow-light);
-    padding: 5px 50px 5px 50px;
+    box-shadow: 0 2px 6px var(--shadow-light);
+    padding: 10px 50px 10px 50px;
     transition: padding .5s;
 
 }
@@ -61,7 +63,7 @@ input[type="submit"]:hover{
 }
 .login-area .login-btn button{
     border-radius: 5px;
-    padding: 5px 25px 5px 25px;
+    padding: 10px 35px 10px 35px;
     background-color: var(--search-btn-bg);
     margin-right: 5vh;
     border: none;
@@ -69,7 +71,32 @@ input[type="submit"]:hover{
     transition: padding .5s;
 }
 .login-area .login-btn button:hover{
-    box-shadow: 0 0 6px var(--shadow-light);
-    padding: 5px 50px 5px 50px;
+    box-shadow: 0 2px 6px var(--shadow-light);
+    padding: 10px 65px 10px 65px;
     transition: padding .5s;
+}
+.card{
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #e6e8e9;
+}
+section#home{
+    margin-top: 10vh;
+}
+
+.container-fluid{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+.card{
+    position: absolute;
+    background-color:var(--lignt-card);
+    border-radius: 10px;
+    box-shadow: 0 1px 5px var(--shadow-light);
+    width : 80%;
+    align-content: center;
+    text-align: center;
 }
