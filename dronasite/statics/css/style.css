@@ -1,22 +1,34 @@
 :root{
     --main-color :rgb(0, 97, 252);
-    --secondary-color : rgb(255, 60, 119);
-    --search-bg : #2b292996;
+    --secondary-color : rgba(248, 59, 115, 0.753);
+    --search-bg : #dbd6d696;
     --input-text : #ffffff;
     --search-btn-bg : #ece4e3bb;
     --search-btn-text : #ffffff;
     --shadow-light : rgba(0, 0, 0, 0.747);
     --lignt-card : #ffffff;
 }
-body{
-
-    background-image: linear-gradient(90deg, rgba(80,0,201,1) 35%, rgba(0,212,255,1) 100%);
-    padding-top: 3vh;
-}
-
+svg { 
+    display: inline-block; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+} 
+.containers { 
+    display: inline-block; 
+    position: absolute; 
+    width: 100%; 
+    padding-bottom: 100%; 
+    vertical-align: middle; 
+    overflow: hidden; 
+    top: 0; 
+    left: 0;
+    background-attachment: fixed;
+} 
 
 nav{
     background: transparent;
+    background-attachment: fixed;
 }
 
 .margin-top{
@@ -59,7 +71,7 @@ input[type="submit"]:hover{
 }
 .login-btn{
     border: none;
-    background-color:var(--search-btn-bg);
+    background-color:var(--secondary-color);
     padding: 10px 35px 10px 35px;
     border-radius: 5px;
     color : var(--search-btn-text);
@@ -76,4 +88,26 @@ input[type="submit"]:hover{
 .container-fluid{
     padding-right: 0;
     padding-left: 0;
+}
+.intro-card{
+    margin-top: 10vh;
+    
+}
+.intro-header{
+    box-shadow: 0 1px 3px #dbd6d696;
+    padding: 3vh 0 0 0;
+}
+.intro-title{
+    font-size: 2.2em;
+}
+.intro-sep{
+    margin: 5vh 0 5vh 0;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color: var(--secondary-color);
+}
+.streams-box{
+    padding: 10vh 10vh 10vh 10vh;
 }
