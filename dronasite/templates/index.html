@@ -18,47 +18,49 @@
   </head>
   <body>
       <!--///// BACKGROUND SVGs/////-->
-    <div class="containers"> 
-        <svg viewBox="0 0 500 500" 
-            preserveAspectRatio="xMinYMin meet"
-            style="z-index: -2;"> 
-              
-            <path d="M0, 100 C150, 200 350, 
-                0 500, 100 L500, 00 L0, 0 Z" 
-                style="stroke: none;  
-                fill:rgba(30, 144, 225, 0.5);"> 
-            </path> 
-        </svg> 
-    </div> 
-      
-    <div class="containers"> 
-        <svg viewBox="0 0 500 500" 
-            preserveAspectRatio="xMinYMin meet"
-            style="z-index:-1;"> 
-              
-            <path d="M0, 80 C300, 0 400,  
-                300 500, 50 L500, 00 L0, 0 Z" 
-                style="stroke: none;  
-                fill:rgba(153, 50, 204, 0.5);"> 
-            </path> 
-        </svg> 
-    </div> 
-      
-    <div class="containers"> 
-        <svg viewBox="0 0 500 500" 
-            preserveAspectRatio="xMinYMin meet"
-            style="z-index:-3;"> 
-              
-            <path d="M0, 100 C150, 300 350, 
-                0 500, 100 L500, 00 L0, 0 Z" 
-                style="stroke: none;  
-                fill:rgba(220, 20, 60, 0.5);"> 
-            </path> 
-        </svg> 
+    <div class="bg-svg">
+        <div class="containers"> 
+            <svg viewBox="0 0 500 500" 
+                preserveAspectRatio="xMinYMin meet"
+                style="z-index: -2;"> 
+                
+                <path d="M0, 100 C150, 200 350, 
+                    0 500, 100 L500, 00 L0, 0 Z" 
+                    style="stroke: none;  
+                    fill:rgba(30, 144, 225, 0.5);"> 
+                </path> 
+            </svg> 
+        </div> 
+        
+        <div class="containers"> 
+            <svg viewBox="0 0 500 500" 
+                preserveAspectRatio="xMinYMin meet"
+                style="z-index:-1;"> 
+                
+                <path d="M0, 80 C300, 0 400,  
+                    300 500, 50 L500, 00 L0, 0 Z" 
+                    style="stroke: none;  
+                    fill:rgba(153, 50, 204, 0.5);"> 
+                </path> 
+            </svg> 
+        </div> 
+        
+        <div class="containers"> 
+            <svg viewBox="0 0 500 500" 
+                preserveAspectRatio="xMinYMin meet"
+                style="z-index:-3;"> 
+                
+                <path d="M0, 100 C150, 300 350, 
+                    0 500, 100 L500, 00 L0, 0 Z" 
+                    style="stroke: none;  
+                    fill:rgba(220, 20, 60, 0.5);"> 
+                </path> 
+            </svg> 
+        </div>
     </div> 
 <!--//// BACKGROUND SVGs END ////-->
 <!--//// Navigation bar starting ////--> 
-    <div class="container margin-top">
+    <div id="head" class="container headbar">
         <div class="row">
             <div class="col-md-6">
                 <div class="row">
@@ -67,7 +69,7 @@
                             <input type="text" placeholder="Enter your Search" name="search">
                     </div>
                     <div class="col-md-4">
-                        <input type="submit" class="border-grad" name="searchkey">
+                        <input type="submit" disabled="true" class="border-grad" name="searchkey">
                     </form>
                     </div>
                 </div>
@@ -81,13 +83,12 @@
     </div>
 <!-- NAvigation bar ending -->
 <div class="container intro-card">
-
     <div class="card text-center intro-header">
         <div class="card-body">
         <h2 class="card-title intro-title">Education Empowers</h2>
         <center><span class="intro-sep"></span></center>
         <p class="card-text">Worried about which college to choose. We will help you find the best you deserve.</p>
-            
+            <br>
             <!--//// Streams selection box ////-->
                 <div class="container">
                     <div class="row streams-box">    
@@ -96,7 +97,7 @@
                                 {% for stream in streams %}
                                 <div class="col-md-4 col-sm-4 stream">
                                     <div class="card stream-cards" id="stream">
-                                    <img class="card-img-top margin-top animate__fadeInDown" src="{{stream.img.url}}" alt="Card image cap">
+                                    <img class="card-img-top margin-top" src="{{stream.img.url}}" alt="Card image cap">
                                     <div class="card-body">
                                         <button id="stream-btn" type="button" class="btn btn-info" onclick="myfunction('{{stream.title}}')" value="{{stream.title}}">
                                         {{stream.title}}
@@ -110,8 +111,26 @@
                 </div>
         </div>
     </div>
-
 </div>
+<section>
+    <div class="container-fluid">
+        <div class="text-center">
+            <div class="card-body">
+                <h2 class="card-title">About Us!</h2>
+                    <center><span class="intro-sep"></span></center>
+                        <div class="about-text">
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                                Ut et turpis odio. Aenean lobortis eros ut dolor interdum, et mattis tortor fringilla. 
+                                In in pharetra libero. Suspendisse in viverra nulla. Curabitur volutpat est metus, 
+                                id efficitur leo porttitor et. Donec eget ipsum ac tortor mattis consectetur. 
+                                Duis orci nunc, sollicitudin vitae interdum nec, pharetra nec felis.
+                                Nulla eleifend elementum odio, eget iaculis ipsum pellentesque sit amet.</p>
+                        </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</section>   
 </body> 
   
 </html> 

@@ -7,7 +7,7 @@ $(document).ready(function(){
         console.log(Math.ceil(positiontop))
 
         if((positiontop > 10) && (positiontop < 213)){
-            $('#stream').addClass('animated bounceInLeft');
+            $('#stream-btn').fadeIn("slow");
         }
         
     });
