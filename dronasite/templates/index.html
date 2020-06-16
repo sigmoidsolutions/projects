@@ -89,13 +89,17 @@
                 <div class="container">
                     <div class="row streams-box">    
                             <!--//// STREAMS LIST ////-->
-                            <div class="card-deck">
+                            <div class="row card-deck" style="justify-content: center;">
                                 {% for stream in streams %}
-                                <div class="card col-4">
-                                  <img class="card-img-top margin-top" src="{{stream.img.url}}" alt="Card image cap">
-                                  <div class="card-body">
-                                    <h5 class="card-title">{{stream.title}}</h5>
-                                  </div>
+                                <div class="col-md-4 col-sm-4 stream">
+                                    <div class="card stream-cards" style="width: 18rem;">
+                                    <img class="card-img-top margin-top" src="{{stream.img.url}}" alt="Card image cap">
+                                    <div class="card-body">
+                                        <button type="button" class="btn btn-info">
+                                        {{stream.title}}
+                                        </button>
+                                    </div>
+                                    </div>
                                 </div>
                                 {% endfor %}
                             </div>

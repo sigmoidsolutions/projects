@@ -7,6 +7,7 @@
     --search-btn-text : #ffffff;
     --shadow-light : rgba(0, 0, 0, 0.747);
     --lignt-card : #ffffff;
+    --card-border : #d4cccc;
 }
 svg { 
     display: inline-block; 
@@ -108,6 +109,23 @@ input[type="submit"]:hover{
     width: 100px;
     background-color: var(--secondary-color);
 }
-.streams-box{
-    padding: 10vh 10vh 10vh 10vh;
+
+.stream-cards{
+    align-items: center;
+    
+}
+.stream-cards:nth-child(2){
+    border: 1px solid var(--card-border);
+}
+.stream-cards:nth-child(2):hover{
+    border:none;
+}
+.stream-cards:hover{
+    box-shadow: 0 1px 15px var(--shadow-light);
+}
+.stream-cards img{
+    width: 50%;
+}
+.stream{
+    margin-bottom: 5vh;
 }
