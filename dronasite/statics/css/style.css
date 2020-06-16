@@ -50,9 +50,8 @@ svg {
 #head.container{
     margin-top: 0;
 }
-.pad-3{
-    margin: 0;
-    padding-top: 10vh;
+.margin-top{
+    margin-top: 3vh;
 }
 input{
     padding: 5px 65px 5px 65px;
@@ -127,16 +126,16 @@ input[type="submit"]:hover{
 
 .stream-cards{
     align-items: center;
+    background-color: hsla(0, 0%, 100%, 0.562);
+    backdrop-filter: blur(8px);
+    transition: padding .2s;
     
 }
-.stream-cards:nth-child(2){
-    border: 1px solid var(--card-border);
-}
-.stream-cards:nth-child(2):hover{
-    border:none;
-}
+
 .stream-cards:hover{
     box-shadow: 0 1px 15px var(--shadow-light);
+    padding: 2vh 2vh 0 2vh;
+    transition: padding .2s;
 }
 .stream-cards img{
     width: 50%;
@@ -145,12 +144,17 @@ input[type="submit"]:hover{
     margin-bottom: 5vh;
 }
 .container-fluid{
-    padding: 10vh 0 10vh 0;
+    padding: 10vh 0 0 0;
 }
 .container-fluid p{
     font-style: italic;
     padding: 7vh 10vh 10vh 10vh;
 }
-.about-text{
-    
+.about-bg{
+    background-color: #ffffffc5;
+    backdrop-filter: blur(28px);
+}
+.intro-header{
+    background-color: #ffffffc5;
+    backdrop-filter: blur(28px);
 }

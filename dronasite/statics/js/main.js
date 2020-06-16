@@ -1,5 +1,5 @@
 function myfunction(text){
-    alert(text + " Selected");
+    window.location.href = "/"+text;
 }
 $(document).ready(function(){
     $(window).scroll(function(){
