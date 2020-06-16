@@ -4,12 +4,15 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <!--Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     {% load static %}
     {% static "assets" as baseUrl %}
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
+    <!-- Animate css -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">
     <script type="text/javascript" src="{% static '/js/main.js' %}"></script>
     <title>Drona | Home</title>
   </head>
@@ -92,10 +95,10 @@
                             <div class="row card-deck" style="justify-content: center;">
                                 {% for stream in streams %}
                                 <div class="col-md-4 col-sm-4 stream">
-                                    <div class="card stream-cards" style="width: 18rem;">
-                                    <img class="card-img-top margin-top" src="{{stream.img.url}}" alt="Card image cap">
+                                    <div class="card stream-cards" id="stream">
+                                    <img class="card-img-top margin-top animate__fadeInDown" src="{{stream.img.url}}" alt="Card image cap">
                                     <div class="card-body">
-                                        <button type="button" class="btn btn-info">
+                                        <button id="stream-btn" type="button" class="btn btn-info" onclick="myfunction('{{stream.title}}')" value="{{stream.title}}">
                                         {{stream.title}}
                                         </button>
                                     </div>

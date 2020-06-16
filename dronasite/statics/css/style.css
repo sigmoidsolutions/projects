@@ -5,7 +5,7 @@
     --input-text : #ffffff;
     --search-btn-bg : #ece4e3bb;
     --search-btn-text : #ffffff;
-    --shadow-light : rgba(0, 0, 0, 0.747);
+    --shadow-light : rgba(143, 138, 138, 0.747);
     --lignt-card : #ffffff;
     --card-border : #d4cccc;
 }
@@ -85,10 +85,6 @@ input[type="submit"]:hover{
 }
 .right{
     text-align: right;
-}
-.container-fluid{
-    padding-right: 0;
-    padding-left: 0;
 }
 .intro-card{
     margin-top: 10vh;
