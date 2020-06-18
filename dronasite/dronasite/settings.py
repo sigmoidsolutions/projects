@@ -86,8 +86,11 @@ WSGI_APPLICATION = 'dronasite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'drona',
+        'HOST': 'localhost',
+        'USER': 'postgres',
+        'PASSWORD': '58077724'
     }
 }
 

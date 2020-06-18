@@ -9,6 +9,9 @@
     --lignt-card : #ffffff;
     --card-border : #d4cccc;
 }
+*{
+    filter: hue(2);
+}
 html{
     scroll-behavior: smooth;
     margin: 0;
@@ -70,8 +73,21 @@ input[type="text"]
     color : var(--input-text);
     transition: padding .5s;
 }
-
+input[type="password"]
+{
+    padding: 10px 35px 10px 35px;
+    backdrop-filter: blur(5px);
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--search-bg);
+    color : var(--input-text);
+    transition: padding .5s;
+}
 input[type="text"]:hover{
+    padding: 10px 65px 10px 65px;
+    transition: padding .5s;
+}
+input[type="password"]:hover{
     padding: 10px 65px 10px 65px;
     transition: padding .5s;
 }
@@ -157,6 +173,10 @@ input[type="submit"]:hover{
 .intro-header{
     background-color: #ffffffc5;
     backdrop-filter: blur(28px);
+}
+.login-card{
+    background: transparent;
+    border: none;
 }
 
 
