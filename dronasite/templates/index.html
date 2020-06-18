@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     {% load static %}
     {% static "assets" as baseUrl %}
+     <!--Font Awesome icons-->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static '/css/style.css' %}">
+   
     <!-- Animate css -->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.0/animate.min.css">
     <script type="text/javascript" src="{% static '/js/main.js' %}"></script>
@@ -62,8 +65,8 @@
 <!--//// Navigation bar starting ////--> 
     <div id="head" class="container headbar">
         <div class="row">
-            <div class="col-md-6">
-                <div class="row">
+            <div class="col-md-6 ">
+                <div class="row search">
                     <div class="col-md-8">
                         <form action="" method="POST">
                             <input type="text" placeholder="Enter your Search" name="search">
@@ -75,11 +78,30 @@
                 </div>
             </div>
             <div class="col-md-6 right">
-                <button class="login-btn">
-                    Login
+                <button class="login-btn" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                    Login&nbsp;&nbsp;<i class="fa fa-caret-down" aria-hidden="true"></i>
                 </button>
             </div>
         </div>
+        <!-- Login and register fields here-->
+
+
+
+
+        <div class="row margin-top">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+
+        <!--- LOgin register ending -->
+
     </div>
 <!-- NAvigation bar ending -->
 <div class="container intro-card">
